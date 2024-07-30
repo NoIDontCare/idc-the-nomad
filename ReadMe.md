@@ -1,4 +1,5 @@
-[GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/NoIDontCare/idc-the-nomad/latest/total)
+![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/NoIDontCare/idc-the-nomad/latest/total)
+
 
 The Nomad...the ultimate explorer's vehicle. Forget the confines of a base, you can now roam the world and take everything with you. Equipped with a 5.56mm auto targeting turret and plenty of space for workstations and other upgrades, you'll never need another vehicle again. It might drive like a boat on land, but man can it hold stuff. Equipped with 240 slots of storage out of the box and the ability to add more when needed, you'll never need a storage box again. Craft on the go with the ability to add workstations to the vehicle.
 
