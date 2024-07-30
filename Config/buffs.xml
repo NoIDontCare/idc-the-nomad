@@ -1,0 +1,161 @@
+<idc>
+	<append xpath="/buffs">
+		<buff name="buffZombieTrackerVehicle" name_key="buffZombieTrackerVehicleName" description_key="buffAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker" icon_color="255,255,0">
+			<duration value="0"/>
+			<update_rate value=".5"/>
+			<display_value value=".ZombieTrackerDelay"/>
+			<display_value_format value="time"/>
+			<effect_group name="Startup">
+				<requirement name="RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				<requirements compare_type="or">
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionOne"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionTwo"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionThree"/>
+				</requirements>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value="3">
+					</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value="2">
+					</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="add" value="-.5"/>
+			</effect_group>
+			<effect_group name="check conditions for a successful track">
+				<requirement name="CVarCompare" cvar=".ZombieTrackerDelay" operation="LTE" value="0"/>
+				<requirement name="RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				<requirements compare_type="or">
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionOne"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionTwo"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionThree"/>
+				</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value=".0117">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="zombietracking" range="20"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionOne"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value=".0117">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="feraltracking" range="40"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionTwo"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerDelay" operation="set" value=".0117">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="radiatedtracking" range="60"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionThree"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>
+				<!-- tracking successful, activate next buff -->
+				<requirement name="RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffZombieTrackerAcquiredVehicle">
+					<requirement name="CVarCompare" cvar=".ZombieTrackerDelay" operation="Equals" value=".0117"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffZombieTrackerVehicle">
+					<requirement name="CVarCompare" cvar=".ZombieTrackerDelay" operation="Equals" value=".0117"/>
+				</triggered_effect>
+				<!-- abort -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffZombieTrackerVehicle">
+					<requirement name="!RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="Tracking not successful, shutdown">
+				<requirement name="CVarCompare" cvar=".ZombieTrackerDelay" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffZombieTrackerNoneTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffZombieTrackerVehicle"/>
+			</effect_group>
+		</buff>
+		<buff name="buffZombieTrackerAcquiredVehicle" name_key="buffZombieTrackerName" description_key="buffZombieTrackerAcquiredDesc" icon="ui_game_symbol_animal_tracker" icon_color="255,0,0">
+			<duration value="0"/>
+			<display_value value=".ZombieTrackerLoseTimer"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffZombieTrackerVehicle"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".ZombieTrackerLoseTimer" operation="set" value="20"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerLoseTimer" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerLoseTimer" operation="set" value="20">
+					<requirement name="RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".ZombieTrackerLoseTimer" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".ZombieTrackerTerminate" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="check conditions for no trackable zombies">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerTerminate" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerTerminate" operation="set" value="0">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="zombietracking" range="20"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionOne"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerTerminate" operation="set" value="0">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="feraltracking" range="40"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionTwo"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ZombieTrackerTerminate" operation="set" value="0">
+					<requirement name="RequirementHasSetRangeTracked, IDCCore" tags="radiatedtracking" range="60"/>
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionThree"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="Track zombies">
+				<passive_effect name="Tracking" operation="base_set" value="1" tags="zombietracking">
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionOne"/>
+				</passive_effect>
+				<passive_effect name="Tracking" operation="base_set" value="1" tags="feraltracking">
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionTwo"/>
+				</passive_effect>
+				<passive_effect name="Tracking" operation="base_set" value="1" tags="radiatedtracking">
+					<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModEntityDetectionThree"/>
+				</passive_effect>
+			</effect_group>
+			<effect_group name="Tracking time ran out or no targets">
+				<requirements compare_type="or">
+					<requirement name="CVarCompare" cvar=".ZombieTrackerLoseTimer" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar=".ZombieTrackerTerminate" operation="Equals" value="1"/>
+				</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkZombieTrackerLostTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffZombieTrackerAcquiredVehicle"/>
+			</effect_group>
+		</buff>
+		<buff name="buffClimateControl" name_key="buffClimateControl" description_key="buffClimateControlDesc" icon="idc_ui_icon_thermostat" icon_color="255,255,255">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<effect_group>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="95"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="95"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierActive" operation="subtract" value=".4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementWet"/>
+			</effect_group>
+		</buff>
+		<buff name="buffTurretSlowdown" hidden="true">
+			<damage_type value="heat"/>
+			<stack_type value="replace"/>
+			<duration value="10"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="5">
+					<requirement name="!EntityTagCompare" tags="player" />
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1">
+					<requirement name="EntityTagCompare" tags="player" />
+				</triggered_effect>
+				<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="30"/>
+
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,10"/>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,10"/>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,10"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,10"/>
+
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.5,0" duration="0,10">
+					<requirement name="!EntityTagCompare" tags="player"/>
+				</passive_effect>
+			</effect_group>
+		</buff>
+	</append>
+	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffClimateControl">
+				<requirement name="RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+				<requirement name="RequirementVehicleHasMod, IDCCore" required_mod="idcVehicleModClimateControl"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="!RequirementIsAttachedToEntityTagged, IDCCore" tags="wsvehicle"/>
+			<requirement name="HasBuff" buff="buffClimateControl"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffClimateControl"/>
+		</effect_group>
+	</append>
+</idc>

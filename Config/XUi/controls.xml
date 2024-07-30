@@ -1,0 +1,38 @@
+<configs>
+	<append xpath="/controls">
+		<idc_v_item_stack controller="Quartz.ItemStack, Quartz" on_scroll="false" allow_dropping="true" prefix_id="false">
+			<rect controller="${controller}" width="${4+cell_width}" height="${4+cell_height}" style="hover, idc_style_item_stack" pivot="center" collider_scale="1.0" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" tooltip="{tooltip}">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="${cell_width-5}" height="${cell_height-5}" pivot="center" color="[idc_style_slot_main_background]" type="sliced" fillcenter="false"/>
+				<sprite depth="3" name="background" sprite="menu_empty3px" pos="0,0" width="${cell_width-10}" height="${cell_height-10}" color="{selectionbordercolor}" type="sliced" pivot="center" globalopacity="true" fillcenter="false"/>
+				<sprite depth="2" name="highlightOverlay" pos="0,0" width="${cell_width-11}" height="${cell_height-11}" color="{backgroundcolor}" type="sliced" pivot="center" globalopacity="true"/>
+				<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored" pos="0,0" width="${cell_width-10}" height="${cell_height-10}" pivot="center" globalopacity="true"/>
+				<sprite depth="6" name="itemIcon" pos="0,2" width="${cell_width-19}" height="${cell_height-19}" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}"/>
+				<sprite depth="8" name="lockTypeIcon" pos="${-cell_width/2+19-pos},${cell_height/2-19+pos}" size="${size}" sprite="{locktypeicon}" pivot="center" foregroundlayer="true"/>
+				<sprite depth="8" name="itemtypeicon" pos="${-cell_width/2+19-pos},${cell_height/2-19+pos}" size="${size}" pivot="center" sprite="ui_game_symbol_{itemtypeicon}" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}"/>
+				<sprite depth="3" name="durabilityBackground" pos="0,${-cell_height/2+13}" width="${cell_width-15}" height="10" sprite="menu_empty3px" color="[idc_style_item_durability_background]" type="sliced" pivot="center" foregroundlayer="true" visible="{hasdurability}"/>
+				<filledsprite depth="4" name="durability" pos="0,${-cell_height/2+13}" width="${cell_width-15}" height="10" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" pivot="center" foregroundlayer="true" visible="{hasdurability}"/>
+				<sprite depth="5" name="disabledOverlay" width="${cell_width-11}" height="${cell_height-11}" color="[darkGrey_half_alpha]" pos="0,0" pivot="center" type="sliced" visible="false"/>
+				<label depth="7" name="stackValue" pos="0,${-cell_height/2+19}" width="${cell_width-18}" height="28" text="{itemcount}" font_size="${font_size}" effect="outline" pivot="center" justify="{#hasdurability ? 'Center' : 'Right'}"/>
+				<label depth="7" name="timer" pos="0,-2" width="${cell_width-19}" height="${cell_height-62}" font_size="${font_size}" justify="center" pivot="center" effect="outline" color="[idc_style_slot_timer_color]"/>
+				<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" pos="0,0" size="${cell_width-8},${cell_height-8}" pivot="center" color="[idc_style_slot_cancel_color]" type="sliced" visible="false" foregroundlayer="true"/>
+				<sprite depth="13" name="assembleIcon" pos="${pos2}" size="${size2}" pivot="center" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" foregroundlayer="true"/>
+			</rect>
+		</idc_v_item_stack>
+		<idc_vehicle_part_slot>
+			<rect controller="IDC_Core.XUiC_VehiclePartStack, IDCCore" style="vehicleStack, hover" sound_play_on_hover="[default_hover]">
+				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="380" height="63" color="[black]" type="sliced" fillcenter="false"/>
+				<sprite name="background" color="[darkGrey]" height="59" pos="0,1" type="sliced"/>
+				<label depth="4" pos="16,-10" width="250" height="28" text="{partname}" font_size="26" justify="left"/>
+				<sprite name="itemIcon" depth="4" width="50" height="50" atlas="{partatlas}" sprite="{particon}" pos="330,-30" pivot="center" color="{particoncolor}" foregroundlayer="true"/>
+				<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY MODIFIER SLOT" text_key="xuiEmptyModifierSlot" font_size="26" justify="center" visible="{emptyvisible}"/>
+			</rect>
+		</idc_vehicle_part_slot>
+		<gps_entry width="254" height="30">
+			<rect height="${height}" width="${width}" style="press, hover, scroll" on_doubleclick="true" disabled_font_color="[disabledLabelColor]" enabled_font_color="[labelColor]" sound="[recipe_click]" controller="ListEntry`1[[IDC_Core.XUiC_GPSPrefabList+GPSListEntry, IDCCore]]" sound_play_on_hover="[default_hover]">
+				<sprite depth="3" name="backgroundMain" sprite="menu_empty" height="${1+height}" pos="2,0" width="${width-4}" color="[black]" type="sliced" fillcenter="false"/>
+				<sprite depth="2" name="background" color="[darkGrey]" pos="2,0" width="${width-4}" type="sliced"/>
+				<label depth="4" name="Name" pos="6,${Round(-height/2,0)}" width="${width-116}" height="${height-4}" text="{name}" font_size="${height-4}" justify="left" pivot="left"/>
+			</rect>
+		</gps_entry>
+	</append>
+</configs>

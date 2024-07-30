@@ -1,0 +1,194 @@
+<idc>
+	<append xpath="/recipes">
+		<recipe name="idcVehicleModFrame" craft_time="60" count="1" tags="workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceSpring" count="4"/>
+		</recipe>
+		<recipe name="idcVehicleModWorkbench" craft_time="300" count="1" tags="learnable">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="workbench" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModCampfire" craft_time="300" count="1" tags="learnable">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="campfire" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModCementMixer" craft_time="300" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="cementMixer" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModForge" craft_time="300" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="forge" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModChemistryStation" craft_time="300" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="chemistryStation" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModStorageBox" craft_time="240" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="cntWoodWritableCrate" count="1"/>
+			<ingredient name="resourceNail" count="20"/>
+		</recipe>
+		<recipe name="idcVehicleModBiggerStorageBox" craft_time="240" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="cntWoodWritableCrate" count="2"/>
+			<ingredient name="resourceNail" count="30"/>
+			<ingredient name="resourceForgedIron" count="25"/>
+		</recipe>
+		<recipe name="idcVehicleModBedroll" craft_time="30" count="1" tags="learnable">
+			<ingredient name="bedrollBlockVariantHelper" count="1"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="resourceCloth" count="20"/>
+		</recipe>
+<!--		<recipe name="idcVehicleModSepticFilter" craft_time="300" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="cntDewCollector" count="1"/>
+		</recipe>-->
+		<recipe name="idcVehicleModRemoteCrafting" craft_time="600" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceSilverNugget" count="15"/>
+			<ingredient name="resourceGoldNugget" count="5"/>
+			<ingredient name="resourceElectricParts" count="30"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+		</recipe>
+		<recipe name="idcVehicleModRemoteCrafting" craft_time="600" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceSilverNugget" count="15"/>
+			<ingredient name="resourceGoldNugget" count="5"/>
+			<ingredient name="resourceElectricParts" count="30"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+		</recipe>
+		<recipe name="idcVehicleRemote" craft_time="1200" count="1" tags="workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="15"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceDuctTape" count="7"/>
+		</recipe>
+		<recipe name="idcVehicleModEntityDetectionOne" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="motionsensor" count="2"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModEntityDetectionTwo" craft_time="300" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="motionsensor" count="3"/>
+			<ingredient name="resourceMechanicalParts" count="7"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModEntityDetectionThree" craft_time="400" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="motionsensor" count="4"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="7"/>
+		</recipe>
+		<recipe name="idcVehicleModClimateControl" craft_time="60" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceSnowBall" count="50"/>
+		</recipe>
+		<recipe name="idcVehicleModLightPlating" craft_time="120" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceForgedSteel" count="75"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		<recipe name="idcVehicleModMediumPlating" craft_time="240" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+		</recipe>
+		<recipe name="idcVehicleModHeavyPlating" craft_time="360" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceForgedSteel" count="300"/>
+			<ingredient name="resourceDuctTape" count="30"/>
+		</recipe>
+		<recipe name="idcVehicleModNavigator" craft_time="1800" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceRawDiamond" count="10"/>
+			<ingredient name="resourceGoldNugget" count="20"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="30"/>
+		</recipe>
+		<recipe name="idcVehicleModFuelGenerator" craft_time="1800" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="solarCell" count="3"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="40"/>
+		</recipe>
+		<recipe name="idcVehicleModLandclaim" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="keystoneBlock" count="1"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModTurretImprovedSprings" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceSpring" count="15"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModTurretImprovedTriggerController" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+			<ingredient name="motionsensor" count="1"/>
+		</recipe>
+		<recipe name="idcVehicleModTurretRadRemover" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="modGunMeleeRadRemover" count="1"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModTurretSpreadTightener" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="modGunDuckbill" count="1"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+		<recipe name="idcVehicleModTurretLimbShredder" craft_time="100" count="1" tags="learnable,workbenchCrafting">
+			<ingredient name="idcVehicleModFrame" count="1"/>
+			<ingredient name="modMeleeClubBarbedWire" count="2"/>
+			<ingredient name="resourceSilverNugget" count="5"/>
+			<ingredient name="resourceDuctTape" count="5"/>
+		</recipe>
+		<recipe name="ammo556mmVehicleBulletBall" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="1"/>
+			<ingredient name="resourceGunPowder" count="3"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		<recipe name="ammo556mmHPVehicleBulletBall" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceGunPowder" count="3"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		<recipe name="ammo556mmAPVehicleBulletBall" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceGunPowder" count="5"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+		</recipe>
+		<recipe name="ammo556mmAPTracerVehicleBulletBall" count="1" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceBulletTip" count="2"/>
+			<ingredient name="resourceGunPowder" count="5"/>
+			<ingredient name="resourceBulletCasing" count="1"/>
+			<ingredient name="ammoGasCan" count="20"/>
+		</recipe>
+		<recipe name="idcVehicleNomadAccessories" count="1" craft_time="210" craft_area="workbench" tags="perkAdvancedMechanic,learnable,workbenchCrafting">
+			<ingredient name="resourceElectricParts" count="20"/>
+			<ingredient name="resourceHeadlight" count="8"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+			<ingredient name="resourceSpring" count="4"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+		</recipe>
+		<recipe name="idcVehicleNomadChassis" count="1" craft_time="210" craft_area="workbench" tags="perkAdvancedMechanic,learnable,workbenchCrafting">
+			<ingredient name="resourceForgedIron" count="250"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceLeather" count="40"/>
+			<ingredient name="resourceElectricParts" count="16"/>
+		</recipe>
+		<recipe name="idcVehicleNomadPlaceable" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="idcVehicleNomadChassis" count="1"/>
+			<ingredient name="idcVehicleNomadAccessories" count="2"/>
+			<ingredient name="smallEngine" count="2"/>
+			<ingredient name="carBattery" count="2"/>
+		</recipe>
+	</append>
+</idc>

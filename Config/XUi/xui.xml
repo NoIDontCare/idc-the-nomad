@@ -1,0 +1,74 @@
+<idc>
+	<append xpath="/xui/ruleset">
+		<window_group name="vehicleWorkstationSelectorWindowGroup" left_panel_valign_top="false" controller="IDC_Core.XUiC_VehicleAttachmentSelectorWindowGroup, IDCCore" close_compass_on_open="true">
+			<window name="vehicleWorkstationSelector"/>
+		</window_group>
+		
+		<window_group name="vehicle_workstation_workbench" controller="IDC_Core.XUiC_VehicleWorkstationWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputVehicle" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+		
+		<window_group name="vehicle_workstation_chemistryStation" controller="IDC_Core.XUiC_VehicleWorkstationWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowFuelVehicle" />
+			<window name="windowOutputVehicle" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="vehicle_workstation_cementMixer" controller="IDC_Core.XUiC_VehicleWorkstationWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowOutputVehicle" />
+			<window name="windowNonPagingHeader" />
+		</window_group>	
+		
+		<window_group name="vehicle_workstation_forge" controller="IDC_Core.XUiC_VehicleWorkstationWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsForgeVehicle" />
+			<window name="windowFuelVehicle" />
+			<window name="windowForgeInputVehicle" />
+			<window name="windowOutputVehicle" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="vehicle_workstation_campfire" controller="IDC_Core.XUiC_VehicleWorkstationWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsCampfireVehicle" />
+			<window name="windowFuelVehicle" />
+			<window name="windowOutputVehicle" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="vehicleScrollableStorage" controller="IDC_Core.XUiC_VehicleStorageWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="queue">
+			<window name="windowNonPagingHeader" />
+			<window name="windowScrollableVehicleStorage" />
+		</window_group>
+		
+		<window_group name="vehicleWorkstation" controller="IDC_Core.XUiC_VehicleWindowGroup, IDCCore" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="content">
+			<window name="windowVehicleWorkstation"/>
+			<window name="windowVehicleTurretAmmoGrid"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="vehicle_passive_collector_cntAdvancedDewCollector" left_panel_valign_top="false" controller="IDC_Core.XUiC_VehiclePassiveCollectorWindowGroup, IDCCore" close_compass_on_open="true">
+			<window name="windowAdvancedDewCollectorVehicle"/>
+			<window name="windowToolsAdvancedDewCollectorVehicle"/>
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		<window_group name="gpsMenu" controller="IDC_Core.XUiC_GPSWindowGroup, IDCCore" defaultSelected="content">
+			<window name="gpsMenu" />
+		</window_group>
+	</append>
+</idc>

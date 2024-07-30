@@ -1,0 +1,41 @@
+<idc>
+	<append xpath="/progression/perks">
+		<perk name="perkAdvancedMechanic" parent="skillIntellectCraftsmanship" name_key="perkAdvancedMechanicName" desc_key="perkAdvancedMechanicDesc" icon="ui_game_symbol_service">
+			<level_requirements level="1">
+				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" desc_key="reqIntellectLevel02"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="reqPerceptionLevel02"/>
+				<requirement name="PlayerLevel" operation="GTE" value="15" desc_key="reqPlayerLevel15"/>
+			</level_requirements>
+			<level_requirements level="2">
+				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/>
+			</level_requirements>
+			<level_requirements level="3">
+				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="4" desc_key="reqPerceptionLevel04"/>
+			</level_requirements>
+			<level_requirements level="4">
+				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/>
+				<requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqPlayerLevel50"/>
+			</level_requirements>
+			<level_requirements level="5">
+				<requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/>
+				<requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/>
+				<requirement name="PlayerLevel" operation="GTE" value="75" desc_key="reqPlayerLevel75"/>
+			</level_requirements>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="idcVehicleNomadChassis,idcVehicleNomadAccessories,idcVehicleNomadPlaceable,idcVehicleModBedroll,idcVehicleModEntityDetectionOne,idcVehicleModLightPlating,idcVehicleModLandclaim"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="idcVehicleModWorkbench,idcVehicleModCampfire,idcVehicleModStorageBox"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="idcVehicleModForge,idcVehicleModEntityDetectionTwo,idcVehicleModMediumPlating"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="idcVehicleModChemistryStation,idcVehicleModCementMixer,idcVehicleModRemoteCrafting,idcVehicleModFuelGenerator,idcVehicleModBiggerStorageBox"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="idcVehicleModEntityDetectionThree,idcVehicleModHeavyPlating,idcVehicleModNavigator,idcVehicleModRemoteAccess"/>
+				<effect_description level="1" desc_key="perkAdvancedMechanicRank1Desc" long_desc_key="perkAdvancedMechanicRank1LongDesc"/>
+				<effect_description level="2" desc_key="perkAdvancedMechanicRank2Desc" long_desc_key="perkAdvancedMechanicRank2LongDesc"/>
+				<effect_description level="3" desc_key="perkAdvancedMechanicRank3Desc" long_desc_key="perkAdvancedMechanicRank3LongDesc"/>
+				<effect_description level="4" desc_key="perkAdvancedMechanicRank4Desc" long_desc_key="perkAdvancedMechanicRank4LongDesc"/>
+				<effect_description level="5" desc_key="perkAdvancedMechanicRank5Desc" long_desc_key="perkAdvancedMechanicRank5LongDesc"/>
+			</effect_group>
+		</perk>
+	</append>
+</idc>

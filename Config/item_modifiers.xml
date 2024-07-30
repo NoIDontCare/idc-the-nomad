@@ -1,0 +1,292 @@
+<idc>
+	<append xpath="/item_modifiers">
+		<item_modifier name="idcVehicleModWorkbench" installable_tags="wsvehicle" modifier_tags="workbench" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModWorkbenchDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="workbench"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".08"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModForge" installable_tags="wsvehicle" modifier_tags="forge" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModForgeDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="forge"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".08"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModChemistryStation" installable_tags="wsvehicle" modifier_tags="chemistryStation" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModChemistryStationDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="chemistryStation"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".08"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModCementMixer" installable_tags="wsvehicle" modifier_tags="cementMixer" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModCementMixerDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="cementMixer"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".08"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModCampfire" installable_tags="wsvehicle" modifier_tags="campfire" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModCampfireDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="campfire"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".08"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModStorageBox" installable_tags="wsvehicle" modifier_tags="storagebox" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModStorageBoxDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="cntWoodWritableCrate"/>
+			<property name="ItemIconType" value="assemble"/>
+			<property name="InventoryRowsAdd" value="3"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModBiggerStorageBox" installable_tags="wsvehicle" modifier_tags="storagebox" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModBiggerStorageBoxDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="cntLootChestHero"/>
+			<property name="ItemIconType" value="assemble"/>
+			<property name="InventoryRowsAdd" value="6"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModBedroll" installable_tags="wsvehicle" modifier_tags="bedroll" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModBedrollDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="bedroll"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModRemoteCrafting" installable_tags="wsvehicle" modifier_tags="remoteCrafting" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModRemoteCraftingDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="breakerBoxClosed"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModSepticFilter" installable_tags="wsvehicle" modifier_tags="septicfilter" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModSepticFilterDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="cntDewCollector"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModRemoteAccess" installable_tags="wsvehicle" modifier_tags="remoteAccess" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModRemoteAccessDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="radioHam"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModEntityDetectionOne" installable_tags="wsvehicle" modifier_tags="vtracker,trackerOne" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModEntityDetectionOneDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="batterybank"/>
+			<property name="CustomIconTint" value="216fed"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModEntityDetectionTwo" installable_tags="wsvehicle" modifier_tags="vtracker,trackerTwo" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModEntityDetectionTwoDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="batterybank"/>
+			<property name="CustomIconTint" value="4fff90"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModEntityDetectionThree" installable_tags="wsvehicle" modifier_tags="vtracker,trackerThree" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModEntityDetectionThreeDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="batterybank"/>
+			<property name="CustomIconTint" value="ff4f4f"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModClimateControl" installable_tags="wsvehicle,vehicle" modifier_tags="climatecontrol" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModClimateControlDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModClimateControlSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="idcVehicleModClimateControl"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModLightPlating" installable_tags="wsvehicle,vehicle" modifier_tags="plating,platingLight" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModLightPlatingDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modRoboticDroneArmorPlatingMod"/>
+			<property name="CustomIconTint" value="216fed"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".80"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".15"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".21"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModMediumPlating" installable_tags="wsvehicle,vehicle" modifier_tags="plating,platingMedium" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModMediumPlatingDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modRoboticDroneArmorPlatingMod"/>
+			<property name="CustomIconTint" value="4fff90"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".60"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".1"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".14"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModHeavyPlating" installable_tags="wsvehicle,vehicle" modifier_tags="plating,platingHeavy" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModHeavyPlatingDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modRoboticDroneArmorPlatingMod"/>
+			<property name="CustomIconTint" value="ff4f4f"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".30"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_subtract" value=".05"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_subtract" value=".07"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModNavigator" installable_tags="wsvehicle" modifier_tags="navigator" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModNavigatorDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="radioHam"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModUWUHorn" installable_tags="wsvehicle" modifier_tags="horn" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModUWUHornDesc"/>
+			<property name="UnlockedBy" value="modVehicleSuperChargerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="speaker"/>
+			<property name="ItemIconType" value="assemble"/>
+			<property name="HornSound" value="uwu_horn"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModFuelGenerator" installable_tags="wsvehicle" modifier_tags="fuelgenerator" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModFuelGeneratorDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="cntGasPumpFull"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".1"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".14"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretImprovedSprings" installable_tags="wsvehicle" modifier_tags="weaponDamage" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretImprovedSpringsDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretImprovedSpringsSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="resourceSpring"/>
+			<property name="ItemIconType" value="assemble"/>
+			<weapon_effect name="EntityDamage" operation="Add" value="20" tags="*"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretImprovedTriggerController" installable_tags="wsvehicle" modifier_tags="firerate" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretImprovedTriggerControllerDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretImprovedTriggerControllerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="resourceElectricParts"/>
+			<property name="ItemIconType" value="assemble"/>
+			<weapon_effect name="RoundsPerMinute" operation="Add" value="50" tags="*"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretRadRemover" installable_tags="wsvehicle" modifier_tags="radremover" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretRadRemoverDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretRadRemoverSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modGunMeleeRadRemover"/>
+			<property name="CustomIconTint" value="4fff90"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<requirement name="EntityTagCompare" target="other" tags="radiated"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretSpreadTightener" installable_tags="wsvehicle" modifier_tags="spreadtighten" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretSpreadTightenerDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretSpreadTightenerSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="modGunDuckbill"/>
+			<property name="CustomIconTint" value="4fff90"/>
+			<property name="ItemIconType" value="assemble"/>
+			<weapon_effect name="SpreadDegreesHorizontal" operation="Subtract" value="10" tags="*"/>
+			<weapon_effect name="SpreadDegreesVertical" operation="Subtract" value="10" tags="*"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretLimbShredder" installable_tags="wsvehicle" modifier_tags="limbshredder" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretLimbShredderDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretLimbShredderSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="barbedWireSpindle2"/>
+			<property name="ItemIconType" value="assemble"/>
+			<weapon_effect name="HeadDismemberChance" operation="PercentAdd" value="15" tags="*"/>
+			<weapon_effect name="LimbDismemberChance" operation="PercentAdd" value="30" tags="*"/>
+		</item_modifier>
+		<item_modifier name="idcVehicleModTurretSlowdown" installable_tags="wsvehicle" modifier_tags="slowdown" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModTurretSlowdownDesc"/>
+			<property name="UnlockedBy" value="idcVehicleModTurretSlowdownSchematic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="idcVehicleModTurretSlowdown"/>
+			<property name="CustomIconTint" value="4fff90"/>
+			<property name="ItemIconType" value="assemble"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffTurretSlowdown"/>
+			</effect_group>
+		</item_modifier>
+		<item_modifier name="idcVehicleModLandclaim" installable_tags="wsvehicle" modifier_tags="landclaim" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="idcVehicleModLandclaimDesc"/>
+			<property name="UnlockedBy" value="perkAdvancedMechanic"/>
+			<property name="TraderStageTemplate" value="modsTier3"/>
+			<property name="CustomIcon" value="keystoneBlock"/>
+			<property name="ItemIconType" value="assemble"/>
+		</item_modifier>
+	</append>
+</idc>

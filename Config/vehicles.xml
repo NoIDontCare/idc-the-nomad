@@ -1,0 +1,264 @@
+<idc>
+	<append xpath="/vehicles">
+		<vehicle name="idcVehicleNomad">
+			<property name="cameraDistance" value="5, 8"/>
+			<property name="cameraTurnRate" value=".2, .35"/>
+			<property name="upAngleMax" value="70"/>
+			<property name="upForce" value="1"/>
+			<property name="steerAngleMax" value="32"/>
+			<property name="steerRate" value="130"/>
+			<property name="steerCenteringRate" value="90"/>
+			<property name="tiltAngleMax" value="80"/>
+			<property name="tiltThreshold" value="3"/>
+			<property name="tiltDampening" value=".22"/>
+			<property name="tiltDampenThreshold" value="8"/>
+			<property name="tiltUpForce" value="0"/>
+			<property name="motorTorque_turbo" value="3500, 1500, 4500, 2000"/>
+			<property name="velocityMax_turbo" value="10, 8, 14, 10"/>
+			<property name="brakeTorque" value="6000"/>
+			<property name="unstickForce" value="1"/>
+			<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+			<property name="wheelPtlScale" value="1"/>
+			<property name="hornSound" value="suv_horn"/>
+			<property name="recipeName" value="idcVehicleNomadPlaceable"/>
+			<property class="chassis">
+				<property name="class" value="Chassis"/>
+				<property name="mesh" value="chassis"/>
+				<property name="transform" value="Origin"/>
+				<property name="paint" value="car_mesh"/>
+			</property>
+			<property class="engine">
+				<property name="class" value="Engine"/>
+				<property name="particleOn" value="p_on"/>
+				<property name="particleDamaged" value="p_damaged"/>
+				<property name="particleBroken" value="p_broken"/>
+				<property name="fuelKmPerL" value=".1"/>
+				<property name="foodDrain" value=".002,.00811"/>
+				<!-- driving/turbo, truck -->
+				<property name="gear1" value="
+								500,2500, -1400,800,0, 700,2200,900,
+								Vehicles/Suv/suv_accel1,
+								Vehicles/Suv/suv_decel1,
+								0, .7, 1, .1, -9, .12, .1, Vehicles/Suv/suv_idle_lp,
+								-.4, -.02, .7, .7, -.2, 9, .2, Vehicles/Suv/suv_max_speed_lp
+								"/>
+				<property name="gear2" value="
+								500,2500, -2000,1000,2000, 600,2200,800,
+								Vehicles/Suv/suv_accel2,
+								Vehicles/Suv/suv_decel1,
+								-.25, -.05, .2, .4, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+								"/>
+				<property name="gear3" value="
+								500,2500, -2000,1000,2000, 500,2200,1000,
+								Vehicles/Suv/suv_accel3,
+								Vehicles/Suv/suv_decel2,
+								-.28, -.07, .3, .6, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+								"/>
+				<property name="gear4" value="
+								500,2500, -2000,1000,2000, 500,9999,9999,
+								,
+								Vehicles/Suv/suv_decel2,
+								-.31, -.08, .6, .9, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+								"/>
+				<property name="sound_start" value="Vehicles/Suv/suv_startup"/>
+				<property name="sound_shut_off" value="Vehicles/Suv/suv_shutoff"/>
+				<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+				<property name="mod" value="speed"/>
+				<property name="modT" value="M/Turbo"/>
+			</property>
+			<property class="fuelTank">
+				<property name="class" value="FuelTank"/>
+				<property name="capacity" value="400"/>
+				<property name="mod" value="fueltank"/>
+				<property name="modT" value="M/Fuel"/>
+			</property>
+			<property class="handlebars">
+				<property name="class" value="Steering"/>
+				<property name="transform" value="Origin/steering_joint"/>
+				<property name="steerAngle" value="0, 0, -60"/>
+				<property name="IKHandLPosition" value="-.2596, -.03777, -.266483"/>
+				<property name="IKHandLRotation" value="-65.88229, 166.2278, -67.5802"/>
+				<property name="IKHandRPosition" value=".24465, -.0909, -.25648"/>
+				<property name="IKHandRRotation" value="54.6357, 14.0615, 102.1651"/>
+			</property>
+			<property class="seat0">
+				<property name="class" value="Seat"/>
+				<property name="pose" value="4"/>
+				<property name="position" value="-.55, .46, 1.7"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-1.7,0,0 ~ 1.7,0,-1 ~ -.25,0,-3.6 ~ -.25,0,3 ~ -.4,2.1,0"/>
+				<property name="IKFootLPosition" value="-0.187798, 0.31342, 0.6437"/>
+				<property name="IKFootLRotation" value="-75.252, 0.176, .7665"/>
+				<property name="IKFootRPosition" value="0.111, 0.339, 0.31"/>
+				<property name="IKFootRRotation" value="-34, 0, 0"/>
+			</property>
+			<property class="seat1">
+				<property name="class" value="Seat"/>
+				<property name="position" value=".65, .46, 1.7"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="1.7,0,0 ~ -1.7,0,-1 ~ .25,0,-3.6 ~ .25,0,3 ~ .4,2.1,0"/>
+				<property name="IKHandLPosition" value="-0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandLRotation" value="-44.83, 60.05, 9.94"/>
+				<property name="IKHandRPosition" value="0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandRRotation" value="46.11, 177.46, 249.91"/>
+				<property name="IKFootLPosition" value="-0.11, 0.32, 0.33"/>
+				<property name="IKFootLRotation" value="-22, 0, 0"/>
+				<property name="IKFootRPosition" value="0.12, 0.33, 0.32"/>
+				<property name="IKFootRRotation" value="-23, 0, 0"/>
+			</property>
+			<property class="seat2">
+				<property name="class" value="Seat"/>
+				<property name="position" value=".65, .46, .27"/>
+				<property name="rotation" value="0, -90, 0"/>
+				<property name="exit" value="-1.1,0,-3.2 ~ -1.8,0,-2 ~ 1.8,0,-2.2 ~ -.5,0,-3.6 ~ .5,0,3 ~ -.3,1.4,-1.8"/>
+				<property name="IKHandLPosition" value="-0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandLRotation" value="-44.83, 60.05, 9.94"/>
+				<property name="IKHandRPosition" value="0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandRRotation" value="46.11, 177.46, 249.91"/>
+				<property name="IKFootLPosition" value="-0.08, 0.259, 0.112"/>
+				<property name="IKFootLRotation" value="22, 0, 0"/>
+				<property name="IKFootRPosition" value="0.06, 0.259, 0.112"/>
+				<property name="IKFootRRotation" value="22, 0, 0"/>
+			</property>
+			<property class="seat3">
+				<property name="class" value="Seat"/>
+				<property name="position" value="-.3, .250, -1.875"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="1.1,0,-3.2 ~ 1.8,0,-2 ~ -1.8,0,-2.2 ~ .5,0,-3.6 ~ -.5,0,3 ~ .3,1.4,-1.8"/>
+				<property name="IKHandLPosition" value="-0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandLRotation" value="-44.83, 60.05, 9.94"/>
+				<property name="IKHandRPosition" value="0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandRRotation" value="46.11, 177.46, 249.91"/>
+				<property name="IKFootLPosition" value="-0.06, 0.259, 0.112"/>
+				<property name="IKFootLRotation" value="22, 0, 0"/>
+				<property name="IKFootRPosition" value="0.08, 0.259, 0.112"/>
+				<property name="IKFootRRotation" value="22, 0, 0"/>
+			</property>
+			<property class="seat4">
+				<property name="class" value="Seat"/>
+				<property name="position" value="-.6, .250, -1.4"/>
+				<property name="rotation" value="0, 180, 0"/>
+				<property name="exit" value="-.4,0,-3.6 ~ -1.4,0,-3.3 ~ -1.4,0,3.1 ~ -.8,0,-3.6 ~ -.8,0,3 ~ -.3,1.4,-2.8"/>
+				<property name="mod" value="seat"/>
+				<property name="modT" value="M/TailGate"/>
+				<property name="modRot" value="-90, 0, 0"/>
+				<property name="IKHandLPosition" value="-0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandLRotation" value="-44.83, 60.05, 9.94"/>
+				<property name="IKHandRPosition" value="0.313, 1.029, -0.151"/>
+				<property name="IKHandRRotation" value="13.53, -178.72, -88.44"/>
+				<property name="IKFootLPosition" value="-0.06, 0.259, 0.112"/>
+				<property name="IKFootLRotation" value="22, 0, 0"/>
+				<property name="IKFootRPosition" value="0.08, 0.259, 0.112"/>
+				<property name="IKFootRRotation" value="22, 0, 0"/>
+			</property>
+			<property class="seat5">
+				<property name="class" value="Seat"/>
+				<property name="position" value="-.2, .275, -.50"/>
+				<property name="rotation" value="0, 90, 0"/>
+				<property name="exit" value=".4,0,-3.6 ~ 1.4,0,-3.3 ~ 1.4,0,3.1 ~ .8,0,-3.6 ~ .8,0,3 ~ .3,1.4,-2.8"/>
+				<property name="mod" value="seat"/>
+				<property name="IKHandLPosition" value="-0.2975, 1.0243, -0.2064"/>
+				<property name="IKHandLRotation" value="-35.92, 21.49, 59.3"/>
+				<property name="IKHandRPosition" value="0.2363, 0.8647, -0.0775"/>
+				<property name="IKHandRRotation" value="46.11, 177.46, 249.91"/>
+				<property name="IKFootLPosition" value="-0.06, 0.259, 0.112"/>
+				<property name="IKFootLRotation" value="22, 0, 0"/>
+				<property name="IKFootRPosition" value="0.08, 0.259, 0.112"/>
+				<property name="IKFootRRotation" value="22, 0, 0"/>
+			</property>
+			<property class="wheel0">
+				<property name="steerTransform" value="Origin/frontLeftWheelStear_joint"/>
+				<property name="tireTransform" value="Origin/frontLeftWheelStear_joint/frontLeftWheel_joint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, .8"/>
+			</property>
+			<property class="wheel1">
+				<property name="steerTransform" value="Origin/frontRightWheelStear_joint"/>
+				<property name="tireTransform" value="Origin/frontRightWheelStear_joint/frontRightWheel_joint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, .8"/>
+			</property>
+			<property class="wheel2">
+				<property name="tireTransform" value="Origin/backLeftWheelJoint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+			<property class="wheel3">
+				<property name="tireTransform" value="Origin/backRightWheelJoint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+			<property class="headlight">
+				<property name="class" value="Headlight"/>
+				<property name="bright" value=".75"/>
+				<property name="transform" value="Origin/headlight"/>
+				<property name="matT" value="M/HeadLights"/>
+				<property name="matEmissive" value="808080"/>
+				<property name="modMatEmissive" value="909090"/>
+				<property name="tailEmissive" value="c0c0c0"/>
+			</property>
+			<property class="storage">
+				<property name="class" value="Storage"/>
+			</property>
+			<property class="fuelgenerator">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="fuelgenerator"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/FuelGenerator"/>
+			</property>
+			<property class="workbench">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="workbench"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/Workbench"/>
+			</property>
+			<property class="campfire">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="campfire"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/Campfire"/>
+			</property>
+			<property class="forge">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="forge"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/Forge"/>
+			</property>
+			<property class="chemistrystation">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="chemistryStation"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/ChemistryStation"/>
+			</property>
+			<property class="cementMixer">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="cementMixer"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/CementMixer"/>
+			</property>
+			<property class="storageboxes">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="storagebox"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/StorageBoxes"/>
+			</property>
+			<property class="armorlight">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="platingLight"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/LightArmor"/>
+				<property name="modRBT" value="LightArmor"/>
+			</property>
+			<property class="armormedium">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="platingMedium"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/MediumArmor"/>
+				<property name="modRBT" value="MediumArmor"/>
+			</property>
+			<property class="armorheavy">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="platingHeavy"/>
+				<property name="modT" value="car_mesh/Heavy Motorhome/HeavyArmor"/>
+				<property name="modRBT" value="HeavyArmor"/>
+			</property>
+			<!--<property class="plow1"> Class does not appear to matter provided it is unique
+				<property name="class" value="VehiclePart"/> Generic vehicle part
+				<property name="mod" value="workbench"/> Tag added by mod. Property name is misleading.
+				<property name="modT" value="M/Plow"/> Transform that is activated must be full path from Mesh
+				<property name="modRBT" value="Plow"/> RigidBody transform
+			</property>-->
+		</vehicle>
+	</append>
+</idc>

@@ -1,0 +1,113 @@
+Key,english
+idcVehicleNomadPlaceable,The Nomad
+idcVehicleNomadPlaceableDesc,"The ultimate base on wheels. Capable of having workstations added for crafting on the road. A top mounted auto turret to fend off the zombies that roam the world, and so much more."
+idcVehicleNomad,The Nomad
+idcVehicleRemote,Vehicle Storage Remote
+idcVehicleRemoteDesc,Bind to a vehicle by using the 'bind inventory' option on the vehicle's radial menu while this item is in your hand. Right click to open the vehicle's inventory. \n\nONLY works if the vehicle is in a loaded chunk.
+idcVehicleModWorkbench,IDC Vehicle Mod: Workbench
+idcVehicleModForge,IDC Vehicle Mod: Forge
+idcVehicleModChemistryStation,IDC Vehicle Mod: Chemistry Station
+idcVehicleModCementMixer,IDC Vehicle Mod: Cement Mixer
+idcVehicleModCampfire,IDC Vehicle Mod: Campfire
+idcVehicleModStorageBox,IDC Vehicle Mod: Storage Box
+idcVehicleModBedroll,IDC Vehicle Mod: Bedroll
+idcVehicleModRemoteCrafting,IDC Vehicle Mod: Remote Crafting
+idcVehicleModSepticFilter,IDC Vehicle Mod: Septic Filter
+idcVehicleModRemoteAccess,IDC Vehicle Mod: Remote Storage Access
+idcVehicleModEntityDetectionOne,IDC Vehicle Mod: Basic Threat Detection
+idcVehicleModEntityDetectionTwo,IDC Vehicle Mod: Advanced Threat Detection
+idcVehicleModEntityDetectionThree,IDC Vehicle Mod: Elite Threat Detection
+idcVehicleModClimateControl,Vehicle Mod: Climate Control
+idcVehicleModLightPlating,Vehicle Mod: Light Plating
+idcVehicleModMediumPlating,Vehicle Mod: Medium Plating
+idcVehicleModHeavyPlating,Vehicle Mod: Heavy Plating
+idcVehicleModNavigator,IDC Vehicle Mod: Navigator
+idcVehicleModFuelGenerator,IDC Vehicle Mod: Fuel Regenerator
+idcVehicleModLandclaim,IDC Vehicle Mod: Landclaim
+idcVehicleModBiggerStorageBox,IDC Vehicle Mod: Bigger Storage Box
+idcVehicleModWorkbenchDesc,Mod for attachment enabled vehicles. Enables workbench use on the vehicle.
+idcVehicleModForgeDesc,Mod for attachment enabled vehicles. Enables forge use on the vehicle.
+idcVehicleModChemistryStationDesc,Mod for attachment enabled vehicles. Enables chemistry station use on the vehicle.
+idcVehicleModCementMixerDesc,Mod for attachment enabled vehicles. Enables cement mixer use on the vehicle.
+idcVehicleModCampfireDesc,Mod for attachment enabled vehicles. Enables campfire use on the vehicle.
+idcVehicleModStorageBoxDesc,Mod for attachment enabled vehicles. Adds an additional 24 slots of inventory space.
+idcVehicleModBedrollDesc,Allows the vehicle to function as a mobile bedroll.
+idcVehicleModRemoteCraftingDesc,Allows the vehicle to craft using materials inside its inventory.
+idcVehicleModSepticFilterDesc,Filters the wastewater from the vehicle and makes it safe to drink. May not taste the best.
+idcVehicleModRemoteAccessDesc,Allows remote access to the vehicle's storage. The chunk the vehicle is in MUST be loaded for this to work.
+idcVehicleModEntityDetectionOneDesc,Allows the vehicle to track zombies. Basic threat detection can only detect non feral or radiated zombies.
+idcVehicleModEntityDetectionTwoDesc,Allows the vehicle to track zombies. Advanced threat detection can detect walking and feral zombies.
+idcVehicleModEntityDetectionThreeDesc,Allows the vehicle to track zombies. Elite threat detection can detect all types of zombies.
+idcVehicleModClimateControlDesc,Protects occupants from weather effects while in the vehicle.
+idcVehicleModLightPlatingDesc,Reduces damage taken by vehicle by 20%.
+idcVehicleModMediumPlatingDesc,Reduces damage taken by vehicle by 40%
+idcVehicleModHeavyPlatingDesc,Reduces damage taken by vehicle by 70%
+idcVehicleModNavigatorDesc,Allows the vehicle to locate any POI in the world. Press 'T' to open the navigator menu.
+idcVehicleModFuelGeneratorDesc,"While moving, the vehicle will gain a speed increase. When in the parked state, the vehicle will slowly regenerate fuel."
+idcVehicleModLandclaimDesc,Allows workstations you place to be picked up when the vehicle is nearby.
+idcVehicleModBiggerStorageBoxDesc,Mod for attachment enabled vehicles. Adds an additional 48 slots of inventory space.
+entitycommand_workstations,Workstations
+entitycommand_bind_remote,Bind Remote
+entitycommand_parkmode,Toggle Park Status
+idcWorkstationSelection,Select A Workstation
+ttVehiceStorageRemoveDenied,Unable to remove mod. Remove some items from the vehicle's inventory.
+ttRemoteBound,Remote bound to vehicle.
+ttNotHoldingRemoteItem,Incorrect item held. Hold the correct item to bind.
+ttRemoteNotBound,This remote is not bound to a vehicle.
+ttCantOpenInventory,Unable to open vehicle inventory. It is likely unloaded.
+ttSetParkedState,"Vehicle parking state is now {0}."
+ttWapointSetForPOI,"Set waypoint to {0}."
+ttEmptyAmmoSlotsBeforePickup,Empty ammo slots before pickup.
+buffClimateControl,Climate Control
+buffClimateControlDesc,You are protected from weather effects while this buff is active.
+idcXuiSelectPOI,Set GPS Waypoint
+idcVehicleModUWUHorn,Vehicle Mod: UWU Horn
+idcVehicleModUWUHornDesc,I hate this.
+perkAdvancedMechanicName,Advanced Mechanic
+perkAdvancedMechanicDesc,You're an even better mechanic than normal. You can craft some useful vehicle mods.
+perkAdvancedMechanicRank1Desc,Novice Mechanic
+perkAdvancedMechanicRank2Desc,Amateur Mechanic
+perkAdvancedMechanicRank3Desc,Skilled Mechanic
+perkAdvancedMechanicRank4Desc,Respected Mechanic
+perkAdvancedMechanicRank5Desc,Master Mechanic
+perkAdvancedMechanicRank1LongDesc,"You are a novice mechanic in the grand scheme of things. You can craft the Nomad vehicle, the bedroll mod, light plating mod, landclaim mod, and basic entity detector mods for attachable vehicles."
+perkAdvancedMechanicRank2LongDesc,"Slightly better than a novice mechanic, you can now craft the workbench, campfire, and storage box mods for attachable vehicles."
+perkAdvancedMechanicRank3LongDesc,"You're finally taking a step up with your mechanic skills. You can craft the forge, medium armor plating, and advanced entity detector mods for attachable vehicles."
+perkAdvancedMechanicRank4LongDesc,"Now you're getting somewhere. You are a respected mechanic amongst the remaining survivors. You can craft the chemistry station, cement mixer, fuel generator, bigger storage boxes, and remote crafting mods for attachable vehicles."
+perkAdvancedMechanicRank5LongDesc,"Mastery at last. You're the guy everyone goes to for vehicle trouble. You can craft the heavy plating, elite entity detector, remote access, and navigator mods for attachable vehicles."
+idcVehicleModFrame,Vehicle Mod Frame
+idcVehicleModFrameDesc,"A core part of many vehicle mods. By itself its useless. However when combined with some other items, it is quite powerful."
+ammo556mmVehicleBulletBall,5.56mm Vehicle Turret Ammo
+ammo556mmVehicleBulletBallDesc,Standard 5.56mm ammo for a vehicle turret.
+ammo556mmHPVehicleBulletBall,5.56mm HP Vehicle Turret Ammo
+ammo556mmHPVehicleBulletBallDesc,High power 5.56mm ammo for a vehicle turret.
+ammo556mmAPVehicleBulletBall,5.56mm AP Vehicle Turret Ammo
+ammo556mmAPVehicleBulletBallDesc,Armor piercing 5.56mm ammo for a vehicle turret.
+ammo556mmAPTracerVehicleBulletBall,5.56mm AP Vehicle Incendiary Ammo
+ammo556mmAPTracerVehicleBulletBallDesc,"Armor piercing indendiary ammo for a vehicle turret. Deals slighly less damage than normal AP ammo, but with the added benefit of lighting shit on fire."
+idcVehicleModTurretImprovedSprings,IDC Vehicle Mod: Improved Turret Springs
+idcVehicleModTurretImprovedSpringsDesc,Improves turret damage on the vehicle by 20 across all ammo types.
+idcVehicleModTurretImprovedTriggerController,IDC Vehicle Mod: Improved Turret Trigger Controller
+idcVehicleModTurretImprovedTriggerControllerDesc,Allows the turret to fire faster. Increases rounds per minute by 50.
+idcVehicleModClimateControlSchematic,Vehicle Climate Control Schematic
+idcVehicleModTurretImprovedSpringsSchematic,Vehicle Turret Improved Springs Schematic
+idcVehicleModTurretImprovedTriggerControllerSchematic,Vehicle Turret Trigger Controller Schematic
+idcVehicleModTurretRadRemover,IDC Vehicle Mod: Turret Rad Remover
+idcVehicleModTurretRadRemoverDesc,Radiated zombies hit by the turret temporarily cease to regenerate health.
+idcVehicleModTurretRadRemoverSchematic,Vehicle Rad Remover Mod Schematic
+idcXuiShareParty,Share to Party
+idcVehicleModTurretSpreadTightener,IDC Vehicle Mod: Turret Spread Reducer
+idcVehicleModTurretSpreadTightenerDesc,Reduces the turret's horizontal and vertical spread.
+idcVehicleModTurretSpreadTightenerSchematic,Vehicle Turret Spread Reducer Schematic
+idcVehicleModTurretLimbShredder,IDC Vehicle Mod: Turret Limb Shredder
+idcVehicleModTurretLimbShredderDesc,Increases the head dismember chance by 15% and limb dismemberment chance by 30% for targets hit by the turret.
+idcVehicleModTurretLimbShredderSchematic,Vehicle Turret Limb Shredder Schematic
+idcVehicleModTurretSlowdown,IDC Vehicle Mod: Turret Enemy Freezer
+idcVehicleModTurretSlowdownDesc,Slows enemies hit by the turret.
+reqPlayerLevel15,Player Level 15
+reqPlayerLevel50,Player Level 50
+reqPlayerLevel75,Player Level 75
+idcVehicleNomadChassis,Nomad Chassis
+idcVehicleNomadAccessories,Nomad Accessories
+idcVehicleNomadChassisDesc,The chassis for the nomad.
+idcVehicleNomadAccessoriesDesc,The accessories for the nomad.

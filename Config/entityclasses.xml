@@ -1,0 +1,475 @@
+<idc>
+	<append xpath="/entity_classes">
+		<entity_class name="idcVehicleNomad">
+			<property name="Class" value="IDC_Core.EntityVehicleAttachableJeep,IDCCore"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="vehicle,usesGas,wsvehicle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Assets/Motorhome.unity3d?MotorhomeFull.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="idcVehicleNomad"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="5"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.BlockDamage" value="100"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_4x4"/>
+			<property name="NavObject" value="4x4"/>
+			<property name="CraftingQueueSlots" value="4"/>
+			<property name="RemoteAccessItem" value="idcVehicleRemote"/>
+			<property name="NavigatorExlusionTags" value=""/>
+			<property class="Workstation0">
+				<property name="id" value="workbench"/>
+				<property name="ModToActivate" value="idcVehicleModWorkbench"/>
+				<property name="RecipesToUse" value="player,workbench"/>
+				<property name="Modules" value="output,tools"/>
+			</property>
+			<property class="Workstation1">
+				<property name="id" value="chemistryStation"/>
+				<property name="ModToActivate" value="idcVehicleModChemistryStation"/>
+				<property name="RecipesToUse" value="chemistryStation,campfire"/>
+				<property name="Modules" value="output,fuel"/>
+			</property>
+			<property class="Workstation2">
+				<property name="id" value="cementMixer"/>
+				<property name="ModToActivate" value="idcVehicleModCementMixer"/>
+				<property name="RecipesToUse" value="player,workbench"/>
+				<property name="Modules" value="output,tools"/>
+			</property>
+			<property class="Workstation3">
+				<property name="id" value="forge"/>
+				<property name="ModToActivate" value="idcVehicleModForge"/>
+				<property name="RecipesToUse" value="forge"/>
+				<property name="Modules" value="tools,output,fuel,material_input"/>
+				<property name="MaterialsUsed" value="iron,brass,lead,glass,stone,clay"/>
+			</property>
+			<property class="Workstation4">
+				<property name="id" value="campfire"/>
+				<property name="ModToActivate" value="idcVehicleModCampfire"/>
+				<property name="RecipesToUse" value="campfire"/>
+				<property name="Modules" value="tools,output,fuel,input"/>
+			</property>
+<!--			<property class="PassiveCollector5">
+				<property name="id" value="cntAdvancedDewCollector"/>
+				<property name="ModToActivate" value="idcVehicleModSepticFilter"/>
+				<property name="PassiveCollectorBlockName" value="cntAdvancedDewCollector"/>
+			</property>-->
+			<property class="EntityTracker">
+				<property name="id" value="entityTracker"/>
+				<property name="ModToActivate" value="idcVehicleModEntityDetectionOne,idcVehicleModEntityDetectionTwo,idcVehicleModEntityDetectionThree"/>
+				<property name="EntityDetectionRefreshRate" value="100"/>
+			</property>
+			<property class="FuelGenerator">
+				<property name="id" value="fuelGenerator"/>
+				<property name="ModToActivate" value="idcVehicleModFuelGenerator"/>
+				<property name="GenerationRate" value="1000"/>
+				<property name="GenerationAmount" value="25"/>
+			</property>
+			<property name="YawRange" value="160"/> 
+			<property name="PitchRange" value="80"/>
+		    <property name="TurnSpeed" value="22.5"/>
+			<property name="BurstFireRate" value="1"/>
+			<property class="VehicleTurret">
+				<property name="RoundsPerMinute" value="100"/>
+				<property name="MaxRange" value="50"/>
+				<property class="AmmoType0">
+					<property name="AmmoName" value="ammo556mmVehicleBulletBall"/>
+					<property name="EntityDamage" value="60"/>
+					<property name="BlockDamage" value="0"/>
+					<property name="EntityPenetrationCount" value="0"/>
+					<property name="BlockPenetrationFactor" value="0"/>
+					<property name="Enabled" value="true"/>
+					<property name="BuffsOnHit" value=""/>
+				</property>
+				<property class="AmmoType1">
+					<property name="AmmoName" value="ammo556mmHPVehicleBulletBall"/>
+					<property name="EntityDamage" value="100"/>
+					<property name="BlockDamage" value="0"/>
+					<property name="EntityPenetrationCount" value="0"/>
+					<property name="BlockPenetrationFactor" value="0"/>
+					<property name="Enabled" value="true"/>
+				</property>
+				<property class="AmmoType2">
+					<property name="AmmoName" value="ammo556mmAPVehicleBulletBall"/>
+					<property name="EntityDamage" value="130"/>
+					<property name="BlockDamage" value="2"/>
+					<property name="EntityPenetrationCount" value="3"/>
+					<property name="BlockPenetrationFactor" value="1"/>
+					<property name="Enabled" value="true"/>
+				</property>
+				<property class="AmmoType3">
+					<property name="AmmoName" value="ammo556mmAPTracerVehicleBulletBall"/>
+					<property name="EntityDamage" value="120"/>
+					<property name="BlockDamage" value="2"/>
+					<property name="EntityPenetrationCount" value="3"/>
+					<property name="BlockPenetrationFactor" value="1"/>
+					<property name="Enabled" value="true"/>
+					<property name="BuffsOnHit" value="buffBurningMolotov"/>
+				</property>
+			</property>
+		</entity_class>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<csv xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='NavObject']/@value" delim="," op="add">zombietrackerNormal</csv>
+	<csv xpath="/entity_classes/entity_class[@name='zombieArlene']/property[@name='Tags']/@value" delim="," op="add">zombietracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieArlene']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieArleneFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieArleneFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieArleneRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMarlene']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMarlene']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMarleneFeral']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMarleneFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMarleneRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombiePartyGirl']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombiePartyGirl']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombiePartyGirlFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombiePartyGirlFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombiePartyGirlRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombiePartyGirlRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieNurse']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieNurse']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieNurseFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieNurseRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieNurseRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJoe']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJoe']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJoeFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJoeFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJoeRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSteve']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSteve']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSteveFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSteveFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSteveRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieTomClark']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieTomClark']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieTomClarkFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieTomClarkFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieTomClarkRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieTomClarkRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBusinessMan']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBusinessMan']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBusinessManFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBusinessManFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBusinessManRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBusinessManRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBurnt']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBurnt']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBurntFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBurntFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBurntRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBurntRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSpider']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSpider']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSpiderFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSpiderRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBoe']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBoe']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBoeFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBoeFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBoeRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMaleHazmat']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmatFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMaleHazmatFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMaleHazmatRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMaleHazmatRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJanitor']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJanitor']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJanitorFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJanitorFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieJanitorRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieJanitorRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieInmate']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieInmate']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieInmateFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieInmateFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieInmateRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieInmateRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMoe']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMoe']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMoeFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMoeFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMoeRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLab']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLab']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLabFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLabRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieDarlene']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieDarlene']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieDarleneFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieDarleneFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieDarleneRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieDarleneRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieYo']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieYo']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieYoFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieYoFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieYoRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieUtilityWorker']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieUtilityWorkerFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBiker']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBiker']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBikerFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBikerFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieBikerRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLumberjack']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLumberjack']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLumberjackFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLumberjackFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieLumberjackRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieLumberjackRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFemaleFat']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFat']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFemaleFatFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFatFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFatRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatHawaiian']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatHawaiianFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatHawaiianRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatCop']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatCopFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieFatCopRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSkateboarder']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSkateboarder']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSkateboarderFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSkateboarderFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSkateboarderRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSoldier']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSoldier']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSoldierFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSoldierRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieWightFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieWightRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieScreamer']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieScreamer']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieScreamerFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieScreamerRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMutated']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMutated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMutatedFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMutatedFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/property[@name='Tags']/@value" delim="," op="add">radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieMutatedRadiated']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerRadiated"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieDemolition']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSteveCrawler']/property[@name='Tags']/@value" delim="," op="add">zombietracking,feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSteveCrawler']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerNormal"/>
+	</append>
+	<csv xpath="/entity_classes/entity_class[@name='zombieSteveCrawlerFeral']/property[@name='Tags']/@value" delim="," op="add">feraltracking,radiatedtracking</csv>
+	<append xpath="entity_classes/entity_class[@name='zombieSteveCrawlerFeral']">
+		<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper,zombietrackerFeral"/>
+	</append>
+</idc>

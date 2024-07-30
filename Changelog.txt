@@ -1,0 +1,10 @@
+[1.1.0]
+- Add missing recipe for storage remote.
+- Add separate item icon for vehicle mod frame.
+- Add missing recipe for bigger storage box mod.
+- Increase input slots for Nomad forges to 3.
+
+- Fix bedroll mod requiring brown bedroll instead of generic one.
+
+[1.0.0]
+- Initial release

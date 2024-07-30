@@ -1,0 +1,66 @@
+<idc>
+	<append xpath="/nav_object_classes">
+		<nav_object_class name="zombietrackerNormal" extends="animaltracking_hostile">
+			<property name="requirement_type" value="Tracking" />
+			<property name="use_override_icon" value="true" />
+			
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,255,255" />
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,255,255" />
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,255,255" />
+				<property name="offset" value="0,1.1,0" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietrackerFeral" extends="animaltracking_hostile">
+			<property name="requirement_type" value="Tracking" />
+			<property name="use_override_icon" value="true" />
+			
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,0,255" />
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,0,255" />
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="255,255,0,255" />
+				<property name="offset" value="0,1.1,0" />
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="zombietrackerRadiated" extends="animaltracking_hostile">
+			<property name="requirement_type" value="Tracking" />
+			<property name="use_override_icon" value="true" />
+			
+			<map_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="0,204,102,255" />
+			</map_settings>
+			
+			<compass_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="0,204,102,255" />
+			</compass_settings>
+			
+			<onscreen_settings>
+				<property name="sprite_name" value="ui_game_symbol_zombie" />
+				<property name="color" value="0,204,102,255" />
+				<property name="offset" value="0,1.1,0" />
+			</onscreen_settings>
+		</nav_object_class>
+	</append>
+</idc>
